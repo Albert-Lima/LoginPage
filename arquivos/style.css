@@ -92,7 +92,7 @@ body{
     font-size: 8pt;
     font-family: monospace;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 50px;
     color: rgba(255, 255, 255, 0.425);
 }
 #create{
@@ -124,4 +124,38 @@ a{
 }
 #link3:hover{
     color:aqua
+}
+@media ( max-width: 750px){
+    body{
+       background-image: linear-gradient( to right, rgb(0, 0, 36), rgb(29, 0, 29)); 
+    }
+    .conteúdo{
+        background-color: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(10px);
+        margin: 20px;
+    }
+}
+@media ( max-width: 550px){
+    #formulário{
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    #formulário input{
+        max-width: 400px;
+    }
+}
+@media ( max-width: 315px){
+    .conteúdo{
+        height: 500px;
+    }
+    #forgot{
+        display: flex;
+        flex-direction: row;
+        font-size: 7pt;
+        margin-top: 70px;
+    }
+    #create{
+        position: relative;
+        margin: auto;
+    }
 }
