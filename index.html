@@ -7,16 +7,63 @@
     <title>Login</title>
 </head>
 <body>
-    <section class="conteúdo">
-        <div id="login"><h1>Member Login</h1></div>
-        <div id="formulário">
-            <div class="textbox"><input type="text" name="" id="name" placeholder="Username"></div>
-            <div class="textbox"><input type="email" name="" id="email" placeholder="Email"></div>
-            <div class="textbox"><input type="password" name="" id="senha" placeholder="Password"></div>
-            <div id="confirm"><input type="submit" value="LOGIN"></div>
-        </div>
-        <div id="forgot"><h2>forgot <a href="" id="link1">Username</a> / <a href="" id="link2">Password?</a></h2></div>
-        <div id="create"><a href="" id="link3">Create your Account &#8594;</a></div>
+    <section id="Menu">
+        <article id="ApresentaçãoBox">
+            <div id="BemVindoTitle">
+                <h1>WELLCOME!</h1>
+                <div id="LinhaEnfeite"></div>
+            </div>
+            <div id="BemVindoText">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequatur, 
+                    delectus excepturi consequuntur.
+                </p>
+            </div>
+            <div id="RedirectBox">
+                <a href="">Já tem uma conta?</a>
+                <button id="BttLerMais">Read more</button>
+            </div>
+        </article>
     </section>
+    <section id="AbaSigin">
+        <section id="BttChangeScreen">
+            <div class="ClassSelect">
+                <div class="centerBtt"></div>
+            </div>
+            <div id="linhaSeparadora"></div>
+            <div class="ClassNoSelect">
+                <div class="centerBtt"></div>
+            </div> 
+        </section>
+        <section id="ColectInfo">
+            <h1>SIGIN IN</h1>
+            <form action="" id="Form">
+                <div class="caixaInput">
+                    <img type="image" src="arquivos/imagens/icone-usuário.png" alt="" class="InputImage">
+                    <input type="text" id="username" placeholder="USERNAME" class="InfoInput" autofocus>
+                </div>
+                <div class="caixaInput">
+                    <img type="image" src="arquivos/imagens/icon mensagem.png" alt="" class="InputImage" id="iconEmail">
+                    <input type="email" id="email" placeholder="E-MAIL" class="InfoInput">
+                </div>
+                <div class="caixaInput">
+                    <img type="image" src="arquivos/imagens/icone-senha.png" alt="" class="InputImage">
+                    <input type="password" id="senha" placeholder="PASSWORD" class="InfoInput">
+                </div>
+
+                <div id="CaixaDeChecagem">
+                    <div id="checkbox">
+                        <img src="arquivos/imagens/senha-salva.png" alt="" id="imagemConfirm" class="imagemConfirm1">
+                    </div>
+                    <label for="checkbox" id="LabelCheckBox">Keep looged in</label>
+                </div>
+                <div id="boxButton">
+                    <button id="enviarForm">Sigin in</button>
+                </div>
+                
+            </form>
+        </section>
+    </section>
+    <script src="arquivos/script.js"></script>
 </body>
 </html>

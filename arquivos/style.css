@@ -1,161 +1,267 @@
 *{
-    margin: 0%;
-    padding: 0%;
+    padding: 0px;
+    margin: 0px;
+}
+:root{
+    --cor-MarromClaro: #956113;
+    --cor-MarromEscuro: #1D1100;
+    --cor-MarromGradiente: #BC5408;
+    --cor-PurpleGradiente: #E91A3F;
+}
+@keyframes animaçãoLinha {
+    0%{
+        margin-left: 0%;
+    }
+    100%{
+        margin-left: 60%;
+    }
 }
 body{
-    background: url('imagens/pexels-aleksandar-pasaric-2411688.jpg');
-    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: hidden;
 }
-.conteúdo{
+#Menu{
+    width: 40%;
+    height: 100vh;
+    background-color: black;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+#ApresentaçãoBox{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+    height: 50vh;
+}
+#BemVindoTitle{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#BemVindoTitle h1{
+    color: var(--cor-MarromClaro);
+    font-size: 30pt;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#LinhaEnfeite{
+    height: 2px;
+    width: 20%;
+    background-color: white;
+    animation-name: animaçãoLinha;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#BemVindoText{
     margin-top: 50px;
-    height: 600px;
-    max-width: 700px;
-    border-radius: 40px;
+    width: 100%;
+}
+#BemVindoText p{
+    color: white;
+    font-size: 10pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#RedirectBox{
+    margin-top: 50px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+#RedirectBox a{
+    text-decoration: none;
+    color: gray;
+    font-family: cursive;
+}
+#RedirectBox a:hover{
+    color: var(--cor-MarromClaro);
+    transition: 0.3s;
+}
+#BttLerMais{
+    transition: 0.3s;
+    margin-top: 10px;
+    height: 30px;
+    width: 80px;
+    padding-bottom: 2px;
     border: none;
-    background-color: rgba(255, 255, 255, 0.048);
-    backdrop-filter: blur(10px);
-}
-#formulário{
-    height: 46%;
-}
-.textbox{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 60px;
-}
-.textbox input{
-    
-    border: 1px solid rgba(255, 255, 255, 0.425);
-    outline: none;
-    font-family: monospace;
-    font-size: 15pt;
     color: white;
+    background-image: linear-gradient( to right, var(--cor-MarromGradiente), var(--cor-PurpleGradiente));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 3px;
+    cursor: pointer;
 }
-#login{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    color: white;
+#BttLerMais:hover{
+    transition: 0.2s;
+    scale: 1.05;
 }
-#name{
-    margin-bottom: 10px;
-    border-radius: 50px;
-    width: 400px;
-    text-align: left;
-    text-indent: 50px;
-    background-color: rgba(26, 26, 26, 0.466);
-}
-#email{
-    margin-bottom: 10px;
-    border-radius: 50px;
-    width: 400px;
-    text-align: left;
-    text-indent: 50px;
-    background-color: rgba(26, 26, 26, 0.466);
-}
-#senha{
-    border-radius: 50px;
-    width: 400px;
-    text-align: left;
-    text-indent: 50px;
-    background-color: rgba(26, 26, 26, 0.466);
-}
-#confirm{
+#AbaSigin{
+    width: 60%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, var(--cor-MarromClaro), var(--cor-MarromEscuro));
     display: flex;
-    flex-direction: row;
-    height: 60px;
-    margin-top: 60px;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
-#confirm input{
-    height: 50px;
-    width: 400px;
-    border-radius: 50px;
-    background-color: rgb(23, 95, 95);
+#BttChangeScreen{
+    width: 30%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.ClassSelect{
+    height: 18px;
+    width: 18px;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.ClassNoSelect{
+    height: 18px;
+    width: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.centerBtt{
+    height: 4px;
+    width: 4px; 
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+}
+#linhaSeparadora{
+    height: 1px;
+    width: 150px;
+    background-color: white;
+}
+#ColectInfo{
+    margin-top: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#ColectInfo h1{
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#Form{
+    margin-top: 30px;
+    width: 100%;
+}
+.caixaInput{
+    background: none;
+    margin-top: 10px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.123);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.InputImage{
+    width: 15px;
+    margin-left: 10px;
+}
+#iconEmail{
+    filter: invert(100%);
+}
+.InfoInput{
+    background: none;
+    width: 80%;
     border: none;
     outline: none;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 10pt;
+    color: white;
 }
-#confirm input:hover{
-    cursor: pointer;
-    background-color: rgb(5, 71, 71);
-    transition: 0.5s;
+.InfoInput:-webkit-autofill {
+    background-color: green !important;
+  }
+.InfoInput::placeholder{
+    color: rgba(255, 255, 255, 0.39);
 }
-#forgot{
+#CaixaDeChecagem{
+    width: 200px;
+    margin-left: 15px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
-    font-size: 8pt;
-    font-family: monospace;
+}
+#checkbox{
+    border: 1px solid white;
+    border-radius: 2px;
+    background: none;
+    outline: none;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.imagemConfirm1{
+    display: none;
+}
+.imagemConfirm2{
+    display: block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    left: 2px;
+    bottom: 4px;
+}
+#LabelCheckBox{
+    margin-left: 10px;
+    color: rgb(151, 151, 151);
+    font-size: 10pt;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#boxButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     margin-top: 50px;
-    color: rgba(255, 255, 255, 0.425);
 }
-#create{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    width: 170px;
-    color: rgba(255, 255, 255, 0.6); 
-    margin-bottom: 30px;
-    margin-right: 30px;
+#enviarForm{
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 180px;
+    color: white;
+    font-size: 13pt;
+    font-weight: 700;
+    background-image: linear-gradient( to right, var(--cor-MarromGradiente), var(--cor-PurpleGradiente));
+    cursor: pointer;
 }
-a{
-    text-decoration: none;
-    text-transform: none;
-    font-family: monospace;
-}
-#link1{
-    color: rgba(255, 255, 255, 0.788);
-}
-#link2{
-    color: rgba(255, 255, 255, 0.788);
-}
-#link3{
-    color: rgba(255, 255, 255, 0.425);
-    font-size: 10pt;
-}
-#link3:hover{
-    color:aqua
-}
-@media ( max-width: 750px){
-    body{
-       background-image: linear-gradient( to right, rgb(0, 0, 36), rgb(29, 0, 29)); 
-    }
-    .conteúdo{
-        background-color: rgba(255, 255, 255, 0.055);
-        backdrop-filter: blur(10px);
-        margin: 20px;
-    }
-}
-@media ( max-width: 550px){
-    #formulário{
-        padding-left: 75px;
-        padding-right: 75px;
-    }
-    #formulário input{
-        max-width: 400px;
-    }
-}
-@media ( max-width: 315px){
-    .conteúdo{
-        height: 500px;
-    }
-    #forgot{
-        display: flex;
-        flex-direction: row;
-        font-size: 7pt;
-        margin-top: 70px;
-    }
-    #create{
-        position: relative;
-        margin: auto;
-    }
+#enviarForm:hover{
+    transition: 0.2s;
+    scale: 1.02;
 }
