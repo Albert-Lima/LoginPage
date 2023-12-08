@@ -6,6 +6,8 @@ var Menu = document.querySelector('#Menu')
 var barra1 = document.querySelector('#barra1')
 var barra2 = document.querySelector('#barra2')
 
+var abaSigin = document.querySelector('#AbaSigin')
+var elementoSeparador = document.querySelector('#ElementoSeparador')
 
 //mostra o keep looged in confirmado
 function ShowConfirm(){
@@ -25,5 +27,8 @@ function OpenMenu(){
     barra1.classList.toggle('barra1-2')
     barra2.classList.toggle('barra2-1')
     barra2.classList.toggle('barra2-2')
+
+    elementoSeparador.classList.toggle('ElementoSeparador1')   
+    elementoSeparador.classList.toggle('ElementoSeparador2') 
 }
 bttMenu.addEventListener('click', OpenMenu)
